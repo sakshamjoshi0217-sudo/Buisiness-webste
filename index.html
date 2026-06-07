@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club-Sharks | Premium Farm-to-Table Fresh Vegetables & Food</title>
+  <meta name="description" content="Club-Sharks delivers hand-harvested, premium quality vegetables and fresh farm foods directly to premium consumers, local families, and high-end restaurants.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- --- Persistent Navigation Header --- -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="logo-link">Club-<span>Sharks</span></a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu-bar">
+          <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="shop.html" class="nav-link" id="nav-shop">Storefront</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About Us</a></li>
+          <li><a href="blog.html" class="nav-link" id="nav-blog">Freshness Guides</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <!-- Cart Toggle Trigger -->
+        <button class="nav-btn" id="cart-btn-toggle" aria-label="Open Shopping Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span class="cart-count" id="cart-badge-count">0</span>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-btn menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- Hero Section --- -->
+  <section class="hero" style="background-image: url('assets/hero_farm.png');" id="home-hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">Premium Agriculture</span>
+        <h1>Freshness Reimagined. From Our Farm to Your Table.</h1>
+        <p>Club-Sharks delivers hand-harvested, organic vegetables and artisan foods directly to local families and premium restaurants within hours of harvest.</p>
+        <div class="hero-ctas">
+          <a href="shop.html" class="btn btn-primary" id="hero-cta-shop">Shop Fresh Now</a>
+          <a href="#featured-harvest" class="btn btn-secondary" id="hero-cta-harvest">View Harvest</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Core Value Propositions --- -->
+  <section class="section value-props" id="value-propositions">
+    <div class="container">
+      <div class="grid grid-3">
+        
+        <div class="prop-card reveal">
+          <div class="prop-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3>4-Hour Delivery Window</h3>
+          <p>We harvest at dawn and deliver by lunch. Unmatched farm-to-table transit speed locking in organic flavor and nutrients.</p>
+        </div>
+
+        <div class="prop-card reveal">
+          <div class="prop-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+          <h3>Elite Quality Control</h3>
+          <p>Every single vegetable undergoes strict sizing, cleanliness, and nutrient-density screening matching Michelin-star requirements.</p>
+        </div>
+
+        <div class="prop-card reveal">
+          <div class="prop-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+          </div>
+          <h3>Zero-Waste Sustainability</h3>
+          <p>Committed to 100% organic composting, solar-powered hydropods, and reusable cardboard delivery bins.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Featured Harvest Preview --- -->
+  <section class="section" id="featured-harvest">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>This Week's Featured Harvest</h2>
+        <p>Crisp, fresh, and hand-selected items straight from the fields of Club-Sharks.</p>
+      </div>
+      
+      <!-- Storefront Catalogue Grid (Dynamically populated by js/app.js) -->
+      <div class="grid grid-3" id="catalog-grid">
+        <!-- Rendered JS items appear here -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;" class="reveal">
+        <a href="shop.html" class="btn btn-primary" id="btn-view-all-shop" style="background-color: var(--color-primary); color: white;">Explore Entire Catalogue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Postcode Delivery Checker Section --- -->
+  <section class="section" id="delivery-checker-section" style="background-color: white;">
+    <div class="container">
+      <div class="delivery-checker reveal">
+        <div class="delivery-checker-content">
+          <h2>Check Your Delivery Zone</h2>
+          <p>We deliver directly to local residences, retail buyers, and restaurant hubs. Enter your ZIP / Postal Code below to confirm daily delivery service availability.</p>
+          <form class="delivery-checker-form" id="zip-check-form">
+            <input type="text" placeholder="Enter Postal Code (e.g. 90210, M4B 1B3)" aria-label="Postal Code Input" id="zip-input" required>
+            <button type="submit" id="zip-submit-btn">Check Availability</button>
+          </form>
+          <div class="form-feedback" id="zip-check-result" style="margin-top: 1rem;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Social Proof & Testimonials --- -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What Our Chefs & Families Say</h2>
+        <p>Read honest reviews of our organic products and delivery times.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"As a restaurant chef, vegetable quality is everything. The greens and baby carrots from Club-Sharks arrive with the morning dew still on them. Our clients taste the difference."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" id="avatar-chef-marcus">MC</div>
+            <div class="author-info">
+              <h4>Chef Marcus Vance</h4>
+              <p>Owner, L'Oasis Fine Dining</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"The weekly Veggie Box subscription is the highlight of our family kitchen. My kids actually look forward to eating broccoli now! Exceptional taste and texture."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" id="avatar-sarah-jordan">SJ</div>
+            <div class="author-info">
+              <h4>Sarah Jordan</h4>
+              <p>Local Premium Consumer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"Outstanding service! We ordered custom bulk boxes of herbs and premium greens. Delivered on time and at perfect temperature. Highly recommend for business partnerships."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" id="avatar-greenhouse-bites">GB</div>
+            <div class="author-info">
+              <h4>Greenhouse Bites</h4>
+              <p>Manager, Organic Bistro Chain</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Persistent Footer --- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Club-<span>Sharks</span></div>
+          <p class="footer-desc">Redefining fresh farm food. Sustainable agriculture meets elite distribution direct to your kitchen door.</p>
+          <p><strong>Phone:</strong> +1 (555) 327-6887<br><strong>Email:</strong> harvest@clubsharks.com</p>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Sitemap</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" id="footer-link-home">Home</a></li>
+            <li><a href="shop.html" id="footer-link-shop">Storefront</a></li>
+            <li><a href="about.html" id="footer-link-about">About Us</a></li>
+            <li><a href="blog.html" id="footer-link-blog">Freshness Guides</a></li>
+            <li><a href="contact.html" id="footer-link-contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Our Standards</h4>
+          <ul class="footer-links">
+            <li><a href="about.html#QC">Quality Control</a></li>
+            <li><a href="about.html#sustainability">Zero-Waste Farm</a></li>
+            <li><a href="shop.html#subscription">Veggie Box Program</a></li>
+            <li><a href="contact.html#support">Logistics & Zone Inquiry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Fresh Farm Log Updates</h4>
+          <p class="footer-desc">Sign up for seasonal recipes, crop schedule highlights, and kitchen preservation tips.</p>
+          <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Club-Sharks Updates!'); this.reset();">
+            <input type="email" placeholder="Your email address" aria-label="Newsletter Email Input" required>
+            <button type="submit" id="newsletter-submit-btn">Join</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Club-Sharks Farm E-commerce. All rights reserved.</p>
+        <p>Terms of Service &bull; Privacy Policy &bull; Certifications</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- Persistent Shopping Cart Drawer --- -->
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-drawer" id="cart-drawer-panel">
+      <div class="cart-header">
+        <h3>Your Fresh Basket</h3>
+        <div class="cart-close-btn" id="cart-close-btn" aria-label="Close Shopping Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+      </div>
+      
+      <div class="cart-items-container" id="cart-items">
+        <!-- Rendered cart items appear dynamically -->
+      </div>
+      
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span class="cart-summary-total" id="cart-subtotal">$0.00</span>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--color-text-light); margin-bottom: 1rem;">Taxes and fresh direct shipping calculated at checkout.</p>
+        <button class="btn btn-shop" id="checkout-btn" style="margin-top: 0; padding: 1rem 0;">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- --- Persistent Checkout Modal Overlay --- -->
+  <div class="modal-overlay" id="checkout-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Secure Checkout</h3>
+        <span class="modal-close" id="checkout-close-btn" aria-label="Close Checkout">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="ck-email">Email Address</label>
+            <input type="email" class="form-control" id="ck-email" placeholder="you@example.com" required>
+            <div class="form-feedback" id="err-ck-email"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="ck-address">Direct Delivery Address</label>
+            <input type="text" class="form-control" id="ck-address" placeholder="123 Farm Road, Suite 400" required>
+            <div class="form-feedback" id="err-ck-address"></div>
+          </div>
+          
+          <div class="form-group">
+            <label>Payment Method</label>
+            <div class="payment-options">
+              <div class="payment-btn selected" data-method="card" id="pay-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <span>Card</span>
+              </div>
+              <div class="payment-btn" data-method="paypal" id="pay-paypal">
+                <span>PayPal</span>
+              </div>
+              <div class="payment-btn" data-method="apple" id="pay-apple">
+                <span>Apple Pay</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="credit-card-fields">
+            <div class="form-group">
+              <label for="ck-card">Card Number</label>
+              <input type="text" class="form-control" id="ck-card" placeholder="4111 2222 3333 4444">
+              <div class="form-feedback" id="err-ck-card"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ck-expiry">Expiry Date</label>
+                <input type="text" class="form-control" id="ck-expiry" placeholder="MM/YY">
+              </div>
+              <div class="form-group">
+                <label for="ck-cvv">CVV</label>
+                <input type="password" class="form-control" id="ck-cvv" placeholder="•••">
+              </div>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-shop" id="submit-order-btn" style="padding: 1rem 0; margin-top: 1rem;">Complete Direct Harvest Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- --- Persistent Nutrition Info Modal Overlay --- -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Harvest & Nutrition Overview</h3>
+        <span class="modal-close" id="modal-close-btn" aria-label="Close Details">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Dynanically populated details -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
